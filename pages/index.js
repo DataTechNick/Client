@@ -1,10 +1,13 @@
-// import Battle from '../components/battle';
-import io from 'socket.io-client';
+import Canvas from '../components/canvas';
+import Hud from '../components/hud';
+import Window from '../components/window';
 
-const socket = io.connect('localhost:3001');
+// import io from 'socket.io-client';
+
+// const socket = io.connect('localhost:3001');
 
 
-export default class ToDo extends React.Component {
+export default class Index extends React.Component {
 
     constructor(props) {
 
@@ -15,23 +18,25 @@ export default class ToDo extends React.Component {
 
     }
 
-    componentWillMount() {
-
+    // componentWillMount() {
         
-        socket.on('socketId', function (data) {
-            console.log(data);
-            this.setState({ socketId: data });
-        });
+        // socket.on('socketId', (data) => {
 
-    }
+            // console.log(data);
+            // this.setState({ socketId: data });
+
+        // });
+
+    // }
 
     render = () => {
         return (
             <div>
-                <h1>{this.state.socketId}</h1>
+                <Canvas/>
+                <Hud/>
+                <Window/>
             </div>
         )
     }
 
 }
-
