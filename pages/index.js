@@ -20,7 +20,7 @@ export default class ToDo extends React.Component {
         
         socket.on('socketId', function (data) {
             console.log(data);
-            this.setState({ socketId: data })
+            this.setState({ socketId: data });
         });
 
     }
