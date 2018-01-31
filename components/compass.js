@@ -1,20 +1,19 @@
 const style = {
-    Bars: {
+    Compass: {
         position: "fixed",
-        bottom: "150px",
-        left: "0",
+        top: "0",
         height: "150px",
         width: "150px",
         backgroundColor: "whitesmoke"
     }
 }
 
-export default class Bars extends React.Component {
+export default class Compass extends React.Component {
 
     render() {
         return (
-            <div style={style.Bars}>
-                bars
+            <div style={style.Compass}>
+                compass
             </div>
         )
     }
